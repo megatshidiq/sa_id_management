@@ -1,4 +1,4 @@
-<?
+<?php
 
 include 'dbc.php';
 $sysid=$_GET['sysid'];
