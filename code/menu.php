@@ -1,4 +1,4 @@
-<?php
+<?
 $page=$_GET['pg'];
 
 if($page==1)
@@ -24,7 +24,7 @@ if($page==4)
 
 <div class="sidebar-wrapper">
                           <ul class="nav">
-
+                        <li>
                          <? echo $active1;?>
 	                    <a href="dashboard.php?pg=1">
 	                        <i class="material-icons">dashboard</i>
@@ -70,7 +70,12 @@ if($page==4)
 	                        <p>Notifications</p>
 	                    </a>
 	                </li>
-
+                  <li>
+	                    <a href="login/logout.php">
+	                        <i class="material-icons text-gray">person</i>
+	                        <p>Logout</p>
+	                    </a>
+	                </li>
 					<li class="active-pro">
 	                    <a href="#">
 	                        <i class="material-icons">unarchive</i>
