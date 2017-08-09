@@ -150,13 +150,13 @@ if ($result->num_rows > 0) {
 	    ////////////count
 	    $sql2 = "select count(*) from user_detail where sys_nameid=$id";
 	$result2 = $conn->query($sql2);
-	if ($result2->num_rows > 0) {
+	if ($result2->num_rows2 > 0) {
 	    // output data of each row
 	    while($row2 = $result2->fetch_assoc()) {
 		$count=  $row2['count(*)'];  
 	    
  	   } 
-	$conn->close();	    
+	//$conn->close();	    
 	    
 	    ////////////////////////
 	    
