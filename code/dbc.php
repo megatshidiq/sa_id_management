@@ -1,5 +1,9 @@
 <?php
-
+$servername = "172.30.240.9";
+$username = "idsa";
+$password = "adslprod";
+$dbname = "sa_review";
+/*
 $con=mysqli_connect("172.30.240.9","idsa","adslprod","sa_review");
 // Check connection
 if (mysqli_connect_errno())
@@ -14,5 +18,5 @@ if (mysqli_connect_errno())
 
 // ...some PHP code for database "test"...
 
-
+*/
 ?>
