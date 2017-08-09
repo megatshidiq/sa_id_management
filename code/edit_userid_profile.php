@@ -11,7 +11,7 @@ $sql = "select * from user_detail where sysid=$sysid";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row1 = $result->fetch_assoc()) {
+    while($row = $result->fetch_assoc()) {
         
     $sys_nameid= $row['sys_nameid'];
     $userid= $row['userid'];
