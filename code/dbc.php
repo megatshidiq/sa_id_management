@@ -10,7 +10,7 @@ if (mysqli_connect_errno())
 // ...some PHP code for database "my_db"...
 
 // Change database to "test"
-mysqli_select_db($con,"test");
+//mysqli_select_db($con,"test");
 
 // ...some PHP code for database "test"...
 
