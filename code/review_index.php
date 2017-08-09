@@ -121,13 +121,13 @@ include 'dbc.php';
 	                                    </thead>
 	                                    <tbody>
                                      
-                                     <?$result1 = mysql_query("SELECT id,server_name,owner FROM system_detail group by server_name");
+                                     <?php $result1 = mysqli_query("SELECT id,server_name,owner FROM system_detail group by server_name");
 
-                                      while($row1 = mysql_fetch_array($result1))
+                                      while($row1 = mysqli_fetch_array($result1))
                                       {
                                          $id= $row1['id'];
 
-                                          $result2 = mysql_query("select count(*) from user_detail where sys_nameid=$id");
+                                          $result2 = mysqli_query("select count(*) from user_detail where sys_nameid=$id");
                                              while($row2 = mysql_fetch_array($result2))
                                       {
                                           $count= $row2['count(*)'];
