@@ -27,7 +27,7 @@ die();
 }
 elseif(($submit=='submit')&&($_GET['staffid']!=''))
 {
-
+echo "masuk weehh";
      $staffnum=$_GET['staffid'];
     include '/api_reader/getStaffProfile.php';
     
