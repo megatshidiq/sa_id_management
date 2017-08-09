@@ -11,7 +11,8 @@ if($_POST['submit']=='submit')
    // echo "masuk";
      $u = $_POST['u'];;
      $p =$_POST['p'];
-    $build_string = "http://itnthackathon.bweas.tm.com.my/api/ldap/".$u."/".$p;
+    //$build_string = "http://itnthackathon.bweas.tm.com.my/api/ldap/".$u."/".$p;
+	$build_string = "http://172.30.201.238:8080/api/ldap/".$u."/".$p;
     
     //echo $build_string;
 
