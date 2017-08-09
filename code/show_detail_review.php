@@ -114,7 +114,7 @@ include 'dbc.php';
 	                            <div class="card-content table-responsive">
 	                                <table class="table">
 	                                    <thead class="text-primary">
-                                      <th>No</th>
+                                      <th>Status</th>
                                       <th >UserID</th>
                                        <th>StaffID</th>
                                        <th>User Fullname</th>
