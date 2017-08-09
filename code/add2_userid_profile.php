@@ -19,9 +19,24 @@ $date = date("Y/m/d");
 
     $sql="insert into user_detail (sys_nameid,userid,staff_id,fullname,email,designation,Remarks,review_flag,date_flag_update) VALUES ('".$sysid."','".$userid."','".$staffid."','".$fullname."','".$email."','".$designation."','".$unit."','2','".$date."')";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 
+
+
+if ($conn->query($sql) === TRUE) {
+    //echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
     // mysql_query($sql);
-//echo '<meta http-equiv="refresh" content="0; url=show_detail_review.php?pg=3&sysid='.$sysid.'" />';
+echo '<meta http-equiv="refresh" content="0; url=show_detail_review.php?pg=3&sysid='.$sysid.'" />';
 
 die();
 }
