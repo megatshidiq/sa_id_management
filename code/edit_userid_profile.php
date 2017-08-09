@@ -2,9 +2,17 @@
 
 include 'dbc.php';
 $sysid=$_GET['sysid'];
- $result = mysql_query("select * from user_detail where sysid=$sysid");
-          while($row = mysql_fetch_array($result))
- {
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql = "select * from user_detail where sysid=$sysid";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row1 = $result->fetch_assoc()) {
+        
     $sys_nameid= $row['sys_nameid'];
     $userid= $row['userid'];
     $staff_id= $row['staff_id'];
@@ -12,7 +20,6 @@ $sysid=$_GET['sysid'];
     $email= $row['email'];
     $Designation= $row['Designation'];
     $Remarks= $row['Remarks'];
-
     if($row['privilege']=="Normal User")
     {
           $selected1 = "selected";
@@ -22,6 +29,10 @@ $sysid=$_GET['sysid'];
           $selected2 = "selected";
     }
  }
+ } else {
+    echo "0 results";
+}
+$conn->close();
 
 
 
@@ -88,7 +99,7 @@ $sysid=$_GET['sysid'];
 				</a>
 			</div>
 
-      <? include "menu.php"?>
+      <?php include "menu.php"?>
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
 				<div class="container-fluid">
@@ -159,19 +170,19 @@ $sysid=$_GET['sysid'];
 	                                        <div class="col-md-5">
 												<div class="form-group label-floating">
 													<label class="control-label">User ID</label>
-													<input value="<? echo $userid;?>" type="text" class="form-control" name="userid" >
+													<input value="<?php echo $userid;?>" type="text" class="form-control" name="userid" >
 												</div>
 	                                        </div>
 	                                        <div class="col-md-3">
 												<div class="form-group label-floating">
 													<label class="control-label">Staff ID</label>
-													<input value="<? echo $staff_id;?>" type="text" class="form-control" name="staffid" >
+													<input value="<?php echo $staff_id;?>" type="text" class="form-control" name="staffid" >
 												</div>
 	                                        </div>
 	                                        <div class="col-md-4">
 												<div class="form-group label-floating">
 													<label class="control-label">Email address</label>
-													<input value="<? echo $email;?>" type="email" class="form-control" name="email">
+													<input value="<?php echo $email;?>" type="email" class="form-control" name="email">
 												</div>
 	                                        </div>
 	                                    </div>
@@ -180,13 +191,13 @@ $sysid=$_GET['sysid'];
 	                                        <div class="col-md-6">
 												<div class="form-group label-floating">
 													<label class="control-label">Fullname</label>
-													<input value="<? echo $fullname;?>" type="text" class="form-control" name="fullname" >
+													<input value="<?php echo $fullname;?>" type="text" class="form-control" name="fullname" >
 												</div>
 	                                        </div>
 	                                        <div class="col-md-6">
 												<div class="form-group label-floating">
 													<label class="control-label">Designation</label>
-													<input value="<? echo $Designation;?>" type="text" class="form-control" name="designation" >
+													<input value="<?php echo $Designation;?>" type="text" class="form-control" name="designation" >
 												</div>
 	                                        </div>
 	                                    </div>
@@ -195,7 +206,7 @@ $sysid=$_GET['sysid'];
 	                                        <div class="col-md-12">
 												<div class="form-group label-floating">
 													<label class="control-label">Unit/Vendor</label>
-													<input value="<? echo $Remarks;?>" type="text" class="form-control" name="remarks" >
+													<input value="<?php echo $Remarks;?>" type="text" class="form-control" name="remarks" >
             </div>
 	                                        </div>
 	                                    </div>
@@ -239,9 +250,9 @@ $sysid=$_GET['sysid'];
 
     							<div class="content">
     								<h6 class="category text-gray">Fullname</h6>
-    								<h4 class="card-title"><? echo $fullname;?></h4>
+    								<h4 class="card-title"><?php echo $fullname;?></h4>
     								<p class="card-content">
-                                        <? echo $Remarks;?>
+                                        <?php echo $Remarks;?>
     								</p>
     								<a href="#pablo" class="btn btn-primary btn-round">Change Image</a>
     							</div>
