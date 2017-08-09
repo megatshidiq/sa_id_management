@@ -132,50 +132,32 @@ $dbname = "sa_review";
 require 'dbc.php';	
 
 		    
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
-
-		 
+} 
 $sql = "SELECT id,server_name,owner FROM system_detail group by server_name";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         
-		$id= $row['id'];
-	    ////////////count
-	    $sql2 = "select count(*) from user_detail where sys_nameid=$id";
-	$result2 = $conn->query($sql2);
-	if ($result2->num_rows2 > 0) {
-	    // output data of each row
-	    while($row2 = $result2->fetch_assoc()) {
-		$count=  $row2['count(*)'];  
-	    
- 	   } 
-	//$conn->close();	    
-	    
-	    ////////////////////////
-	    
-	    
-	    
-	    
-	    
-	    echo ' <tr>
-	               <td>'.$row['server_name'].'</td>
-	               <td>'.$count.'</td>
-	               <td>'.$row['owner'].'</td>
-			<td class="text-primary"><a href="show_detail_review.php?pg=3&sysid='.$row['id'].'">Go</a>
-	               </tr>';
+		
+		echo ' <tr>
+	                                        	<td>'.$row['server_name'].'</td>
+	                                        	<td>'.$count.'</td>
+	                                        	<td>'.$row['owner'].'</td>
+												<td class="text-primary"><a href="show_detail_review.php?pg=3&sysid='.$row['id'].'">Go</a>
+	                                        </tr>';
 		
 		
 		
 		
     }
-} 
+} else {
+    echo "0 results";
+}
 $conn->close();
 ?>
 	                                        
