@@ -234,7 +234,7 @@ $conn->close();
 	                                    </div>
 
 	                                    <button type="submit" class="btn btn-primary pull-right" value="submit" name="submit">Update Profile</button>
-                                     <a href="show_detail_review.php?pg=3&sysid=<? echo $sys_nameid;?>">Back</a>
+                                     <a href="show_detail_review.php?pg=3&sysid=<?php echo $sys_nameid;?>">Back</a>
 	                                    <div class="clearfix"></div>
 	                                </form>
 	                            </div>
