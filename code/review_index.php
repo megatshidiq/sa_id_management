@@ -121,26 +121,25 @@ include 'dbc.php';
 	                                    </thead>
 	                                    <tbody>
                                      
-                                     <?php $result1 = mysqli_query("SELECT id,server_name,owner FROM system_detail group by server_name");
-
-                                      while($row1 = mysqli_fetch_array($result1))
-                                      {
-                                         $id= $row1['id'];
-
-                                          $result2 = mysqli_query("select count(*) from user_detail where sys_nameid=$id");
-                                             while($row2 = mysql_fetch_array($result2))
-                                      {
-                                          $count= $row2['count(*)'];
-                                      }
-                                          
-                                          echo ' <tr>
-	                                        	<td>'.$row1['server_name'].'</td>
-	                                        	<td>'.$count.'</td>
-	                                        	<td>'.$row1['owner'].'</td>
-												<td class="text-primary"><a href="show_detail_review.php?pg=3&sysid='.$row1['id'].'">Go</a>
-	                                        </tr>';
-                                      }
-                                     ?>
+                                    <?php
+$sql = "SELECT id,server_name,owner FROM system_detail group by server_name";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $id= $row['id'];
+		echo ' <tr>
+	   <td>'.$row1['server_name'].'</td>
+	   <td>'.$count.'</td>
+	    <td>'.$row1['owner'].'</td>
+		<td class="text-primary"><a href="show_detail_review.php?pg=3&sysid='.$row1['id'].'">Go</a>
+	    </tr>';
+    }
+} else {
+    echo "0 results";
+}
+					  
+	?>
 	                                        <tr>
 	                                        	<td>Dakota Rice</td>
 	                                        	<td>Niger</td>
