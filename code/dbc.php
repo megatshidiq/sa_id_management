@@ -1,5 +1,18 @@
 <?php
-$dbname = 'sa_review';
-$link = mysqli_connect("172.30.240.9","idsa","adslprod") or die("Couldn't make connection.");
-$db = mysqli_select_db($dbname, $link) or die("Couldn't select database");
+
+$con=mysqli_connect("172.30.240.9","idsa","adslprod","sa_review");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+// ...some PHP code for database "my_db"...
+
+// Change database to "test"
+mysqli_select_db($con,"test");
+
+// ...some PHP code for database "test"...
+
+
 ?>
