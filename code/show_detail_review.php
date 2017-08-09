@@ -1,4 +1,4 @@
-<?
+<?php
 include 'dbc.php';
 ?>
 <!doctype html>
@@ -46,7 +46,7 @@ include 'dbc.php';
 			</div>
 
 
-      <? include "menu.php"?>
+      <?php include "menu.php"?>
 
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
@@ -126,13 +126,22 @@ include 'dbc.php';
 	                                    </thead>
 	                                    <tbody>
 
-                                     <?
+                                     <?php
+	include 'dbc.php';
                                      $id=$_GET['sysid'];
-                                     $result1 = mysql_query("SELECT * FROM user_detail Where sys_nameid='$id' ORDER BY fullname DESC ");
-
-                                      while($row1 = mysql_fetch_array($result1))
-                                      {
-                                            echo ' <tr>
+                                    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql = "SELECT * FROM user_detail Where sys_nameid='$id' ORDER BY fullname DESC ";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row1 = $result->fetch_assoc()) {
+        
+		
+		echo ' <tr>
 	                                        	<td><img src="image/'.$row1['review_flag'].'.jpg" height="42" width="42"></img></td>
                                                <td>'.$row1['userid'].'</td>
 	                                        	<td>'.$row1['staff_id'].'</td>
@@ -143,7 +152,14 @@ include 'dbc.php';
                                           <td>'.$row1['privilege'].'</td>
 												<td class="text-primary"><a href="edit_userid_profile.php?pg=3&sysid='.$row1['sysid'].'">Go</a>
 	                                        </tr>';
-                                      }
+		
+		
+		
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
 
 
 
