@@ -1,4 +1,4 @@
-<?
+<?php
 
 include 'dbc.php';
 
@@ -204,7 +204,7 @@ elseif(($submit=='submit')&&($_GET['staffid']!=''))
 	                                    </div>
 
 	                                    <button type="submit" class="btn btn-primary pull-right" value="submit" name="submit">Update User</button>
-                                     <a href="show_detail_review.php?pg=3&sysid=<? echo $sysid;?>">Back</a>
+                                     <a href="show_detail_review.php?pg=3&sysid=<?php echo $sysid;?>">Back</a>
 	                                    <div class="clearfix"></div>
 	                                </form>
 	                            </div>
@@ -220,9 +220,9 @@ elseif(($submit=='submit')&&($_GET['staffid']!=''))
 
     							<div class="content">
     								<h6 class="category text-gray">Fullname</h6>
-    								<h4 class="card-title"><? echo $fullname;?></h4>
+    								<h4 class="card-title"><?php echo $fullname;?></h4>
     								<p class="card-content">
-                                        <? echo $Remarks;?>
+                                        <?php echo $Remarks;?>
     								</p>
     								<a href="#pablo" class="btn btn-primary btn-round">Change Image</a>
     							</div>
