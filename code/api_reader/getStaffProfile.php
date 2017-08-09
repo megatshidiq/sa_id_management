@@ -1,6 +1,7 @@
 <?php
 
-$get_profile = "http://itnthackathon.bweas.tm.com.my/api/xml/getStaffProfile";
+//$get_profile = "http://itnthackathon.bweas.tm.com.my/api/xml/getStaffProfile";
+$get_profile = "http://172.30.201.238:8080/api/xml/getStaffProfile";
 
 $xml_profile_string = new SimpleXMLElement(file_get_contents($get_profile));
 # http://itnthackathon.bweas.tm.com.my/api/xml/getStaffProfile
