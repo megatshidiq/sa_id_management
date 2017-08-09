@@ -28,10 +28,7 @@ if($_POST['submit']=='submit')
               
              // echo $ldap;
               
-     $servername = "localhost";
-$username = "root";
-$password = "adslprod";
-$dbname = "sa_review";
+    include "../dbc.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
