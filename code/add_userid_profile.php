@@ -192,7 +192,7 @@ die();
 
 	                                    </div>
 
-	                                    <button type="submit" class="btn btn-primary pull-right" value="submit" name="submit">Check From HR</button>
+	                                    <button type="submit" class="btn btn-primary pull-right" value="submit" name="submit">Get Profile</button>
                                      <a href="show_detail_review.php?pg=3&sysid=<?php echo $sysid;?>">Back</a>
 	                                    <div class="clearfix"></div>
 	                                </form>
