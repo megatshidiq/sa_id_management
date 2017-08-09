@@ -129,6 +129,8 @@ $username = "idsa";
 $password = "adslprod";
 $dbname = "sa_review";
 */
+	
+require 'dbc.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
