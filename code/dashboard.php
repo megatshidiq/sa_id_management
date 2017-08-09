@@ -41,7 +41,7 @@
                   SYSTEM ADMINISTRATOR ANM
 				</a>
 			</div>
-	    	<? include "menu.php"?>
+	    	<? require "menu.php"?>
 			
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
