@@ -145,14 +145,15 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        
+        $id=$row['id'];
+	    $count = mysqli_fetch_array(mysqli_query($con, "select count(*) from user_detail where sys_nameid=$id"));
 		
 		echo ' <tr>
-	                                        	<td>'.$row['server_name'].'</td>
-	                                        	<td>'.$count.'</td>
-	                                        	<td>'.$row['owner'].'</td>
-												<td class="text-primary"><a href="show_detail_review.php?pg=3&sysid='.$row['id'].'">Go</a>
-	                                        </tr>';
+	               <td>'.$row['server_name'].'</td>
+	               <td>'.$count.'</td>
+	               <td>'.$row['owner'].'</td>
+			<td class="text-primary"><a href="show_detail_review.php?pg=3&sysid='.$row['id'].'">Go</a>
+	               </tr>';
 		
 		
 		
@@ -163,13 +164,7 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-	                                        <tr>
-	                                        	<td>Dakota Rice</td>
-	                                        	<td>Niger</td>
-	                                        	<td>Oud-Turnhout</td>
-												<td class="text-primary">$36,738</td>
-	                                        </tr>
-
+	                                        
 	                                    </tbody>
 	                                </table>
 
