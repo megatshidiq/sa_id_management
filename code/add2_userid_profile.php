@@ -4,7 +4,7 @@ include 'dbc.php';
 
 if(($_POST['submit']=='submit')&&($_GET['staffid']==''))
 {
-    echo "masuk anto";
+    //echo "masuk anto";
 $sysid=$_POST['sysid'];
 
 $userid=$_POST['userid'];
@@ -42,7 +42,7 @@ die();
 }
 elseif($_GET['staffid']!='')
 {
-echo "masuk weehh";
+//echo "masuk weehh";
      $staffnum=$_GET['staffid'];
     include 'api_reader/getStaffProfile.php';
     
@@ -218,7 +218,7 @@ echo "masuk weehh";
 
 	                                    </div>
 
-	                                    <button type="submit" class="btn btn-primary pull-right" value="submit" name="submit">Update User</button>
+	                                    <button type="submit" class="btn btn-primary pull-right" value="submit" name="submit">Add User</button>
                                      <a href="show_detail_review.php?pg=3&sysid=<?php echo $sysid;?>">Back</a>
 	                                    <div class="clearfix"></div>
 	                                </form>
