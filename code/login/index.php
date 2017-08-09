@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
         $staffid=$row["staff_id"];
         $fullname=$row["fullname"];
         
-        echo $fullname;
+        //echo $fullname;
     }
 } else {
     echo "0 results";
