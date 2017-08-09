@@ -155,9 +155,7 @@ if ($result->num_rows > 0) {
 	    while($row2 = $result2->fetch_assoc()) {
 		$count=  $row2['count(*)'];  
 	    
- 	   } else {
- 	   echo "0 results";
-	}
+ 	   } 
 	$conn->close();	    
 	    
 	    ////////////////////////
@@ -177,9 +175,7 @@ if ($result->num_rows > 0) {
 		
 		
     }
-} else {
-    echo "0 results";
-}
+} 
 $conn->close();
 ?>
 	                                        
