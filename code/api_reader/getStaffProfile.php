@@ -26,7 +26,7 @@ if (($response_xml_data = file_get_contents($get_profile))===false){
    } else {
 
       //print_r($data);
-       //$staffnum="B16645";
+       $staffnum="B16645";
        $i_item = 0;
       
      do {
@@ -61,7 +61,7 @@ if (($response_xml_data = file_get_contents($get_profile))===false){
 
 
 
-     /*
+     
       echo $PERSNO."<br>";
       echo $FULL_NAME."<br>";
       echo $GEN."<br>";
@@ -82,7 +82,7 @@ if (($response_xml_data = file_get_contents($get_profile))===false){
       echo $SV_Email."<br>";
       echo $Picture_URL."<br>";
       echo $Data1."<br>";
-       */
+      
       
 
      // echo array_search("B15365",$data);
