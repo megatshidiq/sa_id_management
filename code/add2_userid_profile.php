@@ -29,7 +29,7 @@ elseif($_GET['staffid']!='')
 {
 echo "masuk weehh";
      $staffnum=$_GET['staffid'];
-    include '/api_reader/getStaffProfile.php';
+    include 'api_reader/getStaffProfile.php';
     
     
 
