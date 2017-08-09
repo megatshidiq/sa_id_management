@@ -79,7 +79,7 @@ elseif(($submit=='submit')&&($_GET['staffid']!=''))
 				</a>
 			</div>
 
-      <? include "menu.php"?>
+      <?php include "menu.php"?>
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
 				<div class="container-fluid">
