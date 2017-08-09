@@ -1,4 +1,4 @@
-<?php
+<?
 $page=$_GET['pg'];
 
 if($page==1)
@@ -70,6 +70,7 @@ if($page==4)
 	                        <p>Notifications</p>
 	                    </a>
 	                </li>
+
 					<li class="active-pro">
 	                    <a href="#">
 	                        <i class="material-icons">unarchive</i>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,9 +42,10 @@
    <div class="logo">
     <a href="#" class="simple-text">
                   SYSTEM ADMINISTRATOR ANM
-				</a>
+
+				</a><?php echo $_SESSION['fullname'] ?>
 			</div>
-	    	<?php require "menu.php"?>
+	    	<? include "menu.php"?>
 			
 	    <div class="main-panel">
 			<nav class="navbar navbar-transparent navbar-absolute">
