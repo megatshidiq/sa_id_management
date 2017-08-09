@@ -122,10 +122,13 @@ require 'dbc.php';
 	                                    <tbody>
                                      
                                   <?php
+	
+/*	
 $servername = "172.30.240.9";
 $username = "idsa";
 $password = "adslprod";
 $dbname = "sa_review";
+*/
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
