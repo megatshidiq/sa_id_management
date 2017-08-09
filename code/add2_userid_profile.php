@@ -25,7 +25,7 @@ echo '<meta http-equiv="refresh" content="0; url=show_detail_review.php?pg=3&sys
 
 die();
 }
-elseif(($submit=='submit')&&($_GET['staffid']!=''))
+elseif($_GET['staffid']!='')
 {
 echo "masuk weehh";
      $staffnum=$_GET['staffid'];
