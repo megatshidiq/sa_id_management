@@ -26,7 +26,7 @@ if (($response_xml_data = file_get_contents($get_profile))===false){
    } else {
 
       //print_r($data);
-       $staffnum="B16645";
+       //$staffnum="B16645";
        $i_item = 0;
       
      do {
