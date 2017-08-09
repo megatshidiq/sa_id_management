@@ -131,14 +131,14 @@ $dbname = "sa_review";
 */
 require 'dbc.php';	
 
-/*		    
+		    
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-*/ 
+
 		 
 $sql = "SELECT id,server_name,owner FROM system_detail group by server_name";
 $result = $conn->query($sql);
