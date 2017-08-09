@@ -2,9 +2,9 @@
 
 include 'dbc.php';
 
-if(($submit=='submit')&&($_GET['staffid']==''))
+if(($_POST['submit']=='submit')&&($_GET['staffid']==''))
 {
-    //echo "masuk anto";
+    echo "masuk anto";
 $sysid=$_POST['sysid'];
 
 $userid=$_POST['userid'];
@@ -20,8 +20,8 @@ $date = date("Y/m/d");
     $sql="insert into user_detail (sys_nameid,userid,staff_id,fullname,email,designation,Remarks,review_flag,date_flag_update) VALUES ('".$sysid."','".$userid."','".$staffid."','".$fullname."','".$email."','".$designation."','".$unit."','2','".$date."')";
 
 
-     mysql_query($sql);
-echo '<meta http-equiv="refresh" content="0; url=show_detail_review.php?pg=3&sysid='.$sysid.'" />';
+    // mysql_query($sql);
+//echo '<meta http-equiv="refresh" content="0; url=show_detail_review.php?pg=3&sysid='.$sysid.'" />';
 
 die();
 }
