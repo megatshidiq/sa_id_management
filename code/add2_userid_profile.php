@@ -29,7 +29,7 @@ elseif(($submit=='submit')&&($_GET['staffid']!=''))
 {
 
      $staffnum=$_GET['staffid'];
-    include 'api_reader/getStaffProfile.php';
+    require 'api_reader/getStaffProfile.php';
     
     
 
