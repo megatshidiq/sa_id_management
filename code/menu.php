@@ -1,4 +1,4 @@
-<?
+<?php
 $page=$_GET['pg'];
 
 if($page==1)
