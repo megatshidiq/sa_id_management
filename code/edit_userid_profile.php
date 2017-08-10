@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 include 'dbc.php';
 $sysid=$_GET['sysid'];
@@ -112,7 +115,7 @@ mysqli_close($conn);
    <div class="logo">
     <a href="#" class="simple-text">
                   SYSTEM ADMINISTRATOR ANM
-				</a>
+				</a><?php echo $_SESSION['fullname'] ?>
 			</div>
 
       <?php include "menu.php"?>
