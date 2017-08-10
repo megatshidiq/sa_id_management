@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 require 'dbc.php';
 ?>
 <!doctype html>
@@ -42,7 +45,7 @@ require 'dbc.php';
 			<div class="logo">
     <a href="#" class="simple-text">
                   SYSTEM ADMINISTRATOR ANM
-				</a>
+				</a><?php echo $_SESSION['fullname'] ?>
 			</div>
 
 
