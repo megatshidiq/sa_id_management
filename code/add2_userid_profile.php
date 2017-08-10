@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 include 'dbc.php';
 
@@ -91,7 +94,7 @@ elseif($_GET['staffid']!='')
    <div class="logo">
     <a href="#" class="simple-text">
                   SYSTEM ADMINISTRATOR ANM
-				</a>
+				</a><?php echo $_SESSION['fullname'] ?>
 			</div>
 
       <?php include "menu.php"?>
