@@ -1,4 +1,4 @@
-<?php
+<?
 $page=$_GET['pg'];
 
 if($page==1)
@@ -33,9 +33,9 @@ if($page==4)
 	                </li>
 	                <li>
                         <? echo $active2;?>
-	                    <a href="#">
+	                    <a href="search_userid_profile.php">
 	                        <i class="material-icons">person</i>
-	                        <p>User Profile</p>
+	                        <p>Search Profile</p>
 	                    </a>
 	                </li>
 	                <li>
