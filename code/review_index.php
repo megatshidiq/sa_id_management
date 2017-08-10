@@ -147,11 +147,11 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $id= $row['id'];
 		$sql2 = "select count(*) from user_detail where sys_nameid='".$id."'";
-	    echo $sql2;
+	   // echo $sql2;
 $result2 = $conn->query($sql2);
 	    while($row2 = $result2->fetch_assoc()) 
 	    {
-		    $count=$row2['id'];
+		    $count=$row2['count(*)'];
 	    }
 		echo ' <tr>
 	                                        	<td>'.$row['server_name'].'</td>
