@@ -25,21 +25,21 @@ if($page==4)
 <div class="sidebar-wrapper">
                           <ul class="nav">
                         <li>
-                         <? echo $active1;?>
+                         <?php echo $active1;?>
 	                    <a href="dashboard.php?pg=1">
 	                        <i class="material-icons">dashboard</i>
 	                        <p>Dashboard</p>
 	                    </a>
 	                </li>
 	                <li>
-                        <? echo $active2;?>
+                        <?php echo $active2;?>
 	                    <a href="search_userid_profile.php">
 	                        <i class="material-icons">person</i>
 	                        <p>Search Profile</p>
 	                    </a>
 	                </li>
 	                <li>
-                        <? echo $active3;?>
+                        <?php echo $active3;?>
 	                    <a href="review_index.php?pg=3">
 	                        <i class="material-icons">content_paste</i>
 	                        <p>User ID Management</p>
