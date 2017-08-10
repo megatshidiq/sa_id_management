@@ -1,4 +1,4 @@
-<?
+<?php
 
 include 'dbc2.php';
 
@@ -252,9 +252,9 @@ $staffid=$_GET['staffid'];
 
     							<div class="content">
     								<h6 class="category text-gray">Fullname</h6>
-    								<h4 class="card-title"><? echo $fullname;?></h4>
+    								<h4 class="card-title"><?php echo $fullname;?></h4>
     								<p class="card-content">
-                                        <? echo $Remarks;?>
+                                        <?php echo $Remarks;?>
     								</p>
     								<a href="#pablo" class="btn btn-primary btn-round">Change Image</a>
     							</div>
@@ -286,7 +286,7 @@ $staffid=$_GET['staffid'];
 	                                    </thead>
 	                                    <tbody>
 
-                                     <?
+                                     <?php
                                      
                                      if($_GET['staffid']!='' )
                                      {
