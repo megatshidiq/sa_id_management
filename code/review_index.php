@@ -146,7 +146,8 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $id= $row['id'];
-		$sql2 = "select count(*) from user_detail where sys_nameid=$id";
+		$sql2 = "select count(*) from user_detail where sys_nameid='".$id."'";
+	    echo $sql2;
 $result2 = $conn->query($sql2);
 	    while($row2 = $result2->fetch_assoc()) 
 	    {
